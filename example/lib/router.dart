@@ -15,23 +15,32 @@ final GoRouter router = GoRouter(
   navigatorKey: rootNavigatorKey,
   initialLocation: "/",
   routes: [
-    GoRoute(path: "/", builder: (context, state) => const MainPage(), routes: [
-      GoRoute(
-        path: "color",
-        builder: (context, state) => const ColorPage(),
-      ),
-      GoRoute(
-        path: "controll",
-        builder: (context, state) => const ControllPage(),
-      ),
-      GoRoute(
-        path: "navigation",
-        builder: (context, state) => const NavigationPage(),
-      ),
-      GoRoute(
-        path: "card",
-        builder: (context, state) => const CardPage(),
-      ),
-    ]),
+    GoRoute(
+      path: "/",
+      name: "main",
+      builder: (context, state) => const MainPage(),
+      routes: [
+        GoRoute(
+          path: "color",
+          name: "color",
+          builder: (context, state) => const ColorPage(),
+        ),
+        GoRoute(
+          path: "controll",
+          name: "controll",
+          builder: (context, state) => const ControllPage(),
+        ),
+        GoRoute(
+          path: "navigation",
+          name: "navigation",
+          builder: (context, state) => const NavigationPage(),
+        ),
+        GoRoute(
+          path: "card",
+          name: "card",
+          builder: (context, state) => const CardPage(),
+        ),
+      ],
+    ),
   ],
 );

@@ -5,22 +5,22 @@ import 'package:go_router/go_router.dart';
 class AppNavigator {
   static void goMain() {
     Router.neglect(rootNavigatorKey.currentContext!,
-        () => rootNavigatorKey.currentContext!.go("/"));
+        () => rootNavigatorKey.currentContext!.goNamed("main"));
   }
 
   static void goColor() {
     Router.neglect(rootNavigatorKey.currentContext!,
-        () => rootNavigatorKey.currentContext!.go("/color"));
+        () => rootNavigatorKey.currentContext!.goNamed("color"));
   }
 
   static void goControll() {
     Router.neglect(rootNavigatorKey.currentContext!,
-        () => rootNavigatorKey.currentContext!.go("/controll"));
+        () => rootNavigatorKey.currentContext!.goNamed("controll"));
   }
 
   static void goNavigation() {
     Router.neglect(rootNavigatorKey.currentContext!,
-        () => rootNavigatorKey.currentContext!.go("/navigation"));
+        () => rootNavigatorKey.currentContext!.goNamed("navigation"));
   }
 
   static void goCard() {

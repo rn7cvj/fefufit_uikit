@@ -1,3 +1,4 @@
+import 'package:fefufit_uikit/src/theme/icon/theme_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:fefufit_uikit/src/theme/color/theme_color.dart';
@@ -15,6 +16,12 @@ class _$FFTheme {
   static List<FFColor> color = [
     FFColor.light,
     FFColor.dark,
+  ];
+
+  @themeExtension
+  static List<FFIcon> icon = [
+    FFIcon.light,
+    FFIcon.dark,
   ];
 }
 

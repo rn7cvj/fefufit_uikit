@@ -1,3 +1,3 @@
 library fefufit_uikit;
 
-export 'src/components/components.dart';
+export 'src/components/export_components.dart';

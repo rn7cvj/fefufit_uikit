@@ -9,6 +9,7 @@ class ControllPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: demoAppBar(context, "Controlls"),
+        backgroundColor: context.ffTheme.color.mainBackgoundColor,
         body: SingleChildScrollView(
           child: Center(
             child: Column(

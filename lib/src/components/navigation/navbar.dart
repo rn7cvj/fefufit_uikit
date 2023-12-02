@@ -1,8 +1,8 @@
 import 'package:fefufit_uikit/src/components/navigation/models/navbar_element.dart';
 import 'package:flutter/material.dart';
 
-class NavBar extends StatelessWidget {
-  const NavBar(
+class FFNavBar extends StatelessWidget {
+  const FFNavBar(
     this.elements, {
     super.key,
     required this.areaHeight,
@@ -12,7 +12,7 @@ class NavBar extends StatelessWidget {
     this.navbarAligment = Alignment.center,
   });
 
-  final List<NavBarElement> elements;
+  final List<FFNavBarElement> elements;
   final double areaHeight;
 
   final double navbarHeight;

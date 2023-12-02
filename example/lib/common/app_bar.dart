@@ -1,4 +1,5 @@
 import 'package:example/controllers/theme/controller.dart';
+import 'package:example/navigator.dart';
 import 'package:fefufit_uikit/fefufit_uikit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
@@ -7,6 +8,9 @@ import 'package:mobx/mobx.dart';
 AppBar demoAppBar(BuildContext context, String title) {
   return AppBar(
     title: Text(title),
+    automaticallyImplyLeading: false,
+    leading: const IconButton(
+        onPressed: AppNavigator.goMain, icon: Icon(Icons.arrow_back)),
     actions: [ThemeSwitcher()],
     backgroundColor: context.ffTheme.color.minorBackgoundColor,
   );

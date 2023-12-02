@@ -20,11 +20,21 @@ class MainPage extends StatelessWidget {
                   constraints: const BoxConstraints(maxWidth: 360),
                   child: const FFMainButton(
                       text: "Colors", onTap: AppNavigator.goColor)),
-              SizedBox(height: 18),
+              const SizedBox(height: 18),
               ConstrainedBox(
                   constraints: const BoxConstraints(maxWidth: 360),
                   child: const FFMainButton(
                       text: "Controls", onTap: AppNavigator.goControll)),
+              const SizedBox(height: 18),
+              ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 360),
+                  child: const FFMainButton(
+                      text: "Navigation", onTap: AppNavigator.goNavigation)),
+              const SizedBox(height: 18),
+              ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 360),
+                  child: const FFMainButton(
+                      text: "Card", onTap: AppNavigator.goCard)),
             ],
           ),
         ),

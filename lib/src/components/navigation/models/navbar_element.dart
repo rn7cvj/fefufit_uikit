@@ -1,12 +1,12 @@
 import 'package:flutter/widgets.dart';
 
-class NavBarElement {
+class FFNavBarElement {
   final void Function()? onTap;
   final Widget icon;
   final String? title;
   final bool isActive;
 
-  NavBarElement({
+  FFNavBarElement({
     required this.icon,
     required this.onTap,
     this.title,

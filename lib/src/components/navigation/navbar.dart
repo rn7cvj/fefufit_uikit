@@ -6,7 +6,7 @@ class NavBar extends StatelessWidget {
     this.elements, {
     super.key,
     required this.areaHeight,
-    required this.navbarColor,
+    this.navbarColor = const Color.fromRGBO(223, 223, 223, 1),
     this.navbarHeight = 56,
     this.navbarWidth = 250,
     this.navbarAligment = Alignment.center,

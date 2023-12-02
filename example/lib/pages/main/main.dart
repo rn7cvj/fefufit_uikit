@@ -1,3 +1,6 @@
+import 'package:example/main.dart';
+import 'package:example/navigator.dart';
+import 'package:fefufit_uikit/fefufit_uikit.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatelessWidget {
@@ -5,6 +8,27 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("FefuFit UiKit"),
+      ),
+      body: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 360),
+                  child: const FFMainButton(
+                      text: "Colors", onTap: AppNavigator.goColor)),
+              SizedBox(height: 18),
+              ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 360),
+                  child: const FFMainButton(
+                      text: "Controls", onTap: AppNavigator.goControll)),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

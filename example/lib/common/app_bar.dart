@@ -6,7 +6,6 @@ import 'package:mobx/mobx.dart';
 
 AppBar demoAppBar(BuildContext context, String title) {
   return AppBar(
-    automaticallyImplyLeading: false,
     title: Text(title),
     actions: [ThemeSwitcher()],
     backgroundColor: context.ffTheme.color.minorBackgoundColor,

@@ -1,0 +1,31 @@
+name: example
+description: "FefuFit UiKit Demo"
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0-143.0.dev <4.0.0'
+dependencies:
+
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+
+  go_router: ^10.0.0
+
+  mobx: ^2.2.0
+  flutter_mobx: ^2.0.6+5
+
+
+  fefufit_uikit:
+    path: ../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+
+  uses-material-design: true

@@ -9,6 +9,7 @@ class NavBar extends StatelessWidget {
     required this.navbarColor,
     this.navbarHeight = 56,
     this.navbarWidth = 250,
+    this.navbarAligment = Alignment.center,
   });
 
   final List<NavBarElement> elements;
@@ -18,7 +19,7 @@ class NavBar extends StatelessWidget {
   final double navbarWidth;
   final Color navbarColor;
 
-  final Alignment navbarAligment = Alignment.center;
+  final Alignment navbarAligment;
 
   @override
   Widget build(BuildContext context) {

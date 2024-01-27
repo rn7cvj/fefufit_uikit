@@ -60,15 +60,14 @@ class ControllPage extends StatelessWidget {
                       text: 'Disable Button', onTap: null, isLoading: false),
                 ),
 
-                // Outline Button
-
                 const SizedBox(height: 18),
                 ConstrainedBox(
                   constraints: const BoxConstraints(maxWidth: 360),
                   child: Divider(color: context.ffTheme.color.mainLineColor),
                 ),
 
-                // Minor Button
+                // Outline Button
+
                 const SizedBox(height: 18),
                 ConstrainedBox(
                   constraints: const BoxConstraints(maxWidth: 360),
@@ -87,6 +86,34 @@ class ControllPage extends StatelessWidget {
                   child: const FFOutlinedButton(
                       text: 'Disable Button', onTap: null, isLoading: false),
                 ),
+
+                const SizedBox(height: 18),
+                ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 360),
+                  child: Divider(color: context.ffTheme.color.mainLineColor),
+                ),
+
+                // Text Button
+
+                SizedBox(
+                  height: 62,
+                  child: Center(
+                    child: FFMainTextButton(
+                      text: "Main Text Button",
+                      onTap: () {},
+                    ),
+                  ),
+                ),
+
+                SizedBox(
+                  height: 62,
+                  child: Center(
+                    child: FFMinorTextButton(
+                      text: "Minor Text Button",
+                      onTap: () {},
+                    ),
+                  ),
+                )
               ],
             ),
           ),

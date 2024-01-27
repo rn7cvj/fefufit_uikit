@@ -28,13 +28,15 @@ class FFMinorButton extends StatelessWidget {
           child: Center(
             child: isLoading
                 ? LoadingAnimationWidget.prograssiveDots(
-                    color: Colors.white, size: 60)
+                    color: context.ffTheme.color.onMinorControllColor,
+                    size: 60,
+                  )
                 : Text(
                     text,
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.normal,
-                        color: Theme.of(context).colorScheme.onPrimary),
+                        color: context.ffTheme.color.onMinorControllColor),
                   ),
           ),
         ),

@@ -14,13 +14,15 @@ class FFOutlinedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Color lineColor = onTap != null
+        ? context.ffTheme.color.mainLineColor
+        : Theme.of(context).disabledColor;
+
     return Material(
       child: Container(
         decoration: BoxDecoration(
             border: Border.all(
-              color: onTap != null
-                  ? context.ffTheme.color.mainLineColor
-                  : Theme.of(context).disabledColor,
+              color: lineColor,
             ),
             borderRadius: BorderRadius.circular(13)),
         height: 64,
@@ -31,13 +33,16 @@ class FFOutlinedButton extends StatelessWidget {
           child: Center(
             child: isLoading
                 ? LoadingAnimationWidget.prograssiveDots(
-                    color: Colors.white, size: 60)
+                    color: lineColor,
+                    size: 60,
+                  )
                 : Text(
                     text,
                     style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.normal,
-                        color: Theme.of(context).colorScheme.onPrimary),
+                      fontSize: 20,
+                      fontWeight: FontWeight.normal,
+                      color: lineColor,
+                    ),
                   ),
           ),
         ),

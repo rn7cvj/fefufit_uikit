@@ -28,13 +28,16 @@ class FFMainButton extends StatelessWidget {
           child: Center(
             child: isLoading
                 ? LoadingAnimationWidget.prograssiveDots(
-                    color: Colors.white, size: 60)
+                    color: context.ffTheme.color.onMainControllColor,
+                    size: 60,
+                  )
                 : Text(
                     text,
                     style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.normal,
-                        color: Theme.of(context).colorScheme.onPrimary),
+                      fontSize: 20,
+                      fontWeight: FontWeight.normal,
+                      color: context.ffTheme.color.onMainControllColor,
+                    ),
                   ),
           ),
         ),

@@ -16,6 +16,8 @@ class FFColor extends ThemeExtension<FFColor> {
     required this.mainTextColor,
     required this.minorBackgoundColor,
     required this.minorControllColor,
+    required this.onMainControllColor,
+    required this.onMinorControllColor,
   });
 
   final Color mainBackgoundColor;
@@ -24,6 +26,8 @@ class FFColor extends ThemeExtension<FFColor> {
   final Color mainTextColor;
   final Color minorBackgoundColor;
   final Color minorControllColor;
+  final Color onMainControllColor;
+  final Color onMinorControllColor;
 
   static const FFColor light = FFColor(
     mainBackgoundColor: Color.fromRGBO(255, 255, 255, 1),
@@ -32,6 +36,8 @@ class FFColor extends ThemeExtension<FFColor> {
     mainTextColor: Color.fromRGBO(37, 37, 37, 1),
     minorBackgoundColor: Color.fromRGBO(247, 247, 247, 1),
     minorControllColor: Color.fromRGBO(37, 37, 37, 1),
+    onMainControllColor: Color.fromRGBO(223, 223, 223, 1),
+    onMinorControllColor: Color.fromRGBO(223, 223, 223, 1),
   );
 
   static const FFColor dark = FFColor(
@@ -41,6 +47,8 @@ class FFColor extends ThemeExtension<FFColor> {
     mainTextColor: Color.fromRGBO(225, 225, 225, 1),
     minorBackgoundColor: Color.fromRGBO(74, 74, 74, 1),
     minorControllColor: Color.fromRGBO(223, 223, 223, 1),
+    onMainControllColor: Color.fromRGBO(223, 223, 223, 1),
+    onMinorControllColor: Color.fromRGBO(37, 37, 37, 1),
   );
 
   static const themes = [
@@ -56,6 +64,8 @@ class FFColor extends ThemeExtension<FFColor> {
     Color? mainTextColor,
     Color? minorBackgoundColor,
     Color? minorControllColor,
+    Color? onMainControllColor,
+    Color? onMinorControllColor,
   }) {
     return FFColor(
       mainBackgoundColor: mainBackgoundColor ?? this.mainBackgoundColor,
@@ -64,6 +74,8 @@ class FFColor extends ThemeExtension<FFColor> {
       mainTextColor: mainTextColor ?? this.mainTextColor,
       minorBackgoundColor: minorBackgoundColor ?? this.minorBackgoundColor,
       minorControllColor: minorControllColor ?? this.minorControllColor,
+      onMainControllColor: onMainControllColor ?? this.onMainControllColor,
+      onMinorControllColor: onMinorControllColor ?? this.onMinorControllColor,
     );
   }
 
@@ -81,6 +93,10 @@ class FFColor extends ThemeExtension<FFColor> {
           Color.lerp(minorBackgoundColor, other.minorBackgoundColor, t)!,
       minorControllColor:
           Color.lerp(minorControllColor, other.minorControllColor, t)!,
+      onMainControllColor:
+          Color.lerp(onMainControllColor, other.onMainControllColor, t)!,
+      onMinorControllColor:
+          Color.lerp(onMinorControllColor, other.onMinorControllColor, t)!,
     );
   }
 
@@ -100,7 +116,11 @@ class FFColor extends ThemeExtension<FFColor> {
             const DeepCollectionEquality()
                 .equals(minorBackgoundColor, other.minorBackgoundColor) &&
             const DeepCollectionEquality()
-                .equals(minorControllColor, other.minorControllColor));
+                .equals(minorControllColor, other.minorControllColor) &&
+            const DeepCollectionEquality()
+                .equals(onMainControllColor, other.onMainControllColor) &&
+            const DeepCollectionEquality()
+                .equals(onMinorControllColor, other.onMinorControllColor));
   }
 
   @override
@@ -113,6 +133,8 @@ class FFColor extends ThemeExtension<FFColor> {
       const DeepCollectionEquality().hash(mainTextColor),
       const DeepCollectionEquality().hash(minorBackgoundColor),
       const DeepCollectionEquality().hash(minorControllColor),
+      const DeepCollectionEquality().hash(onMainControllColor),
+      const DeepCollectionEquality().hash(onMinorControllColor),
     );
   }
 }

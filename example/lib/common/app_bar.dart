@@ -9,14 +9,17 @@ AppBar demoAppBar(BuildContext context, String title) {
   return AppBar(
     title: Text(title),
     automaticallyImplyLeading: false,
+    forceMaterialTransparency: false,
     leading: const IconButton(
         onPressed: AppNavigator.goMain, icon: Icon(Icons.arrow_back)),
-    actions: [ThemeSwitcher()],
+    actions: [const ThemeSwitcher()],
     backgroundColor: context.ffTheme.color.minorBackgoundColor,
   );
 }
 
 class ThemeSwitcher extends StatelessWidget {
+  const ThemeSwitcher({super.key});
+
   @override
   Widget build(BuildContext context) => Observer(builder: (context) {
         IconData icon = selectedThemeMode.value == ThemeMode.light

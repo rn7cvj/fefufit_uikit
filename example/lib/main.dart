@@ -28,26 +28,14 @@ class App extends StatelessWidget {
   const App({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    final _lightTheme = ThemeData(
-      brightness: Brightness.light,
-      extensions: [FFTheme.light],
-    );
-
-    final _darkTheme = ThemeData(
-      brightness: Brightness.dark,
-      extensions: [FFTheme.dark],
-    );
-
-    return Observer(builder: (context) {
-      return MaterialApp.router(
-        title: "FefuFit UiKit Demo",
-        themeMode: selectedThemeMode.value,
-        theme: _lightTheme,
-        darkTheme: _darkTheme,
-        debugShowCheckedModeBanner: false,
-        routerConfig: router,
+  Widget build(BuildContext context) => Observer(
+        builder: (context) => MaterialApp.router(
+          title: "FefuFit UiKit Demo",
+          themeMode: selectedThemeMode.value,
+          theme: ffLightTheme,
+          darkTheme: ffDarkTheme,
+          debugShowCheckedModeBanner: false,
+          routerConfig: router,
+        ),
       );
-    });
-  }
 }

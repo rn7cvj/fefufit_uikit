@@ -20,9 +20,19 @@ class _$FFColor {
     Color.fromRGBO(67, 67, 244, 1),
   ];
 
+  static const List<Color> onMainControllColor = [
+    Color.fromRGBO(223, 223, 223, 1),
+    Color.fromRGBO(223, 223, 223, 1),
+  ];
+
   static const List<Color> minorControllColor = [
     Color.fromRGBO(37, 37, 37, 1),
     Color.fromRGBO(223, 223, 223, 1),
+  ];
+
+  static const List<Color> onMinorControllColor = [
+    Color.fromRGBO(223, 223, 223, 1),
+    Color.fromRGBO(37, 37, 37, 1),
   ];
 
   static const List<Color> mainLineColor = [

@@ -63,17 +63,33 @@ class ColorCircle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          width: 100,
-          height: 100,
-          decoration: BoxDecoration(shape: BoxShape.circle, color: color),
-          child: Center(child: Text(color.toHex())),
+    return Theme(
+      data: ThemeData.from(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: color,
+          brightness: Theme.of(context).brightness,
         ),
-        const SizedBox(height: 8.0),
-        Text(name)
-      ],
+      ),
+      child: Column(
+        children: [
+          Container(
+            width: 100,
+            height: 100,
+            decoration: BoxDecoration(shape: BoxShape.circle, color: color),
+            child: Center(
+              child: Text(
+                color.toHex(),
+                style: Theme.of(context)
+                    .textTheme
+                    .titleMedium
+                    ?.copyWith(color: Theme.of(context).colorScheme.onPrimary),
+              ),
+            ),
+          ),
+          const SizedBox(height: 8.0),
+          Text(name)
+        ],
+      ),
     );
   }
 }

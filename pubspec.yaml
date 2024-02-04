@@ -18,6 +18,9 @@ dependencies:
   loading_animation_widget: ^1.2.0+4
   flutter_svg: ^2.0.9
 
+  balanced_text: ^0.0.3
+  top_snackbar_flutter: ^3.1.0
+
 
 dev_dependencies:
 

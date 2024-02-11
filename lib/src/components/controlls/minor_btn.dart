@@ -3,17 +3,29 @@ import 'package:flutter/material.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 class FFMinorButton extends StatelessWidget {
-  const FFMinorButton(
-      {super.key,
-      required this.text,
-      required this.onTap,
-      this.isLoading = false});
+  const FFMinorButton({
+    super.key,
+    required this.text,
+    required this.onTap,
+    this.isLoading = false,
+    this.textStyle,
+  });
+
   final String text;
   final void Function()? onTap;
   final bool isLoading;
+  final TextStyle? textStyle;
 
   @override
   Widget build(BuildContext context) {
+    TextStyle? applyTextStyle = textStyle;
+
+    applyTextStyle ??= TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.normal,
+      color: context.ffTheme.color.onMinorControllColor,
+    );
+
     return Card(
       margin: EdgeInsets.zero,
       color: onTap != null
@@ -28,16 +40,8 @@ class FFMinorButton extends StatelessWidget {
           child: Center(
             child: isLoading
                 ? LoadingAnimationWidget.prograssiveDots(
-                    color: context.ffTheme.color.onMinorControllColor,
-                    size: 60,
-                  )
-                : Text(
-                    text,
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.normal,
-                        color: context.ffTheme.color.onMinorControllColor),
-                  ),
+                    color: context.ffTheme.color.onMinorControllColor, size: 60)
+                : Text(text, style: applyTextStyle),
           ),
         ),
       ),
